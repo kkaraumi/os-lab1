@@ -5,18 +5,17 @@
       "name": "Debug hello (gdb)",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/hello.exe",
+      "program": "${workspaceFolder}/build/hello",
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
       "preLaunchTask": "build",
-      "windows": {
-        "program": "${workspaceFolder}/build/hello.exe",
-        "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe"
-      },
       "linux": {
-        "program": "${workspaceFolder}/build/hello",
-        "miDebuggerPath": "/usr/bin/gdb"
+        "miDebuggerPath": "/usr/bin/gdb",
+        "program": "${workspaceFolder}/build/hello"
+      },
+      "windows": {
+        "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+        "program": "${workspaceFolder}/build/hello.exe"
       }
     }
   ]

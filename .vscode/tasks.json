@@ -5,13 +5,16 @@
       "label": "configure",
       "type": "shell",
       "command": "cmake",
-      "args": [
-        "-S", ".", "-B", "build", "-G", "MinGW Makefiles",
-        "-DCMAKE_MAKE_PROGRAM=C:/msys64/ucrt64/bin/mingw32-make.exe",
-        "-DCMAKE_C_COMPILER=C:/msys64/ucrt64/bin/gcc.exe",
-        "-DCMAKE_CXX_COMPILER=C:/msys64/ucrt64/bin/g++.exe",
-        "-DCMAKE_BUILD_TYPE=Debug"
-      ]
+      "args": ["-S", ".", "-B", "build", "-DCMAKE_BUILD_TYPE=Debug"],
+      "windows": {
+        "args": [
+          "-S", ".", "-B", "build", "-G", "MinGW Makefiles",
+          "-DCMAKE_MAKE_PROGRAM=C:/msys64/ucrt64/bin/mingw32-make.exe",
+          "-DCMAKE_C_COMPILER=C:/msys64/ucrt64/bin/gcc.exe",
+          "-DCMAKE_CXX_COMPILER=C:/msys64/ucrt64/bin/g++.exe",
+          "-DCMAKE_BUILD_TYPE=Debug"
+        ]
+      }
     },
     {
       "label": "build",
